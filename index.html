@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <title>Free Programming Education</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <script>
+     var textIndex = 0;
+     var txt = 'Your Programming Journey Begins Here*>>> |';
+     var done = false;
+
+     // type out the text
+     function type(){
+         if(textIndex < txt.length){
+             if(txt.charAt(textIndex) != '*')
+                 document.getElementById('typed').innerHTML += txt.charAt(textIndex);
+             else
+                 document.getElementById('typed').innerHTML += "<br>";
+             
+             textIndex++;             
+
+             setTimeout(type, (done ? 500 : 50));
+             
+         } else { // flash prompt
+             done = true;
+             // cut off the last character
+             var tmp = document.getElementById('typed').innerHTML;
+             tmp = tmp.substring(0, tmp.length - 1);
+             
+             textIndex--;
+             document.getElementById('typed').innerHTML = tmp;
+             
+             setTimeout(type, 500);
+         }
+     }
+
+     // call on page load
+     window.onload = () => { type(); }
+    </script>
+  </head>
+
+  <body>
+    <div class="content">
+      
+      <div class="parallax">
+        <h1>Free Online Computer Science Education</h1>
+        <h2 id="typed">>>> </h2>
+        <p>
+          We provide free programming lessons online for any skill level. With this site, you can start wherever you want. Brand new programmer who has never written a line of code? Start at level 0. Just looking for a refresher on a specific topic? Go straight where you want to.
+        </p>
+      </div>
+      <div class="parallax">
+          <h1>Levels</h1>
+          <div class="classContainer">
+              <a href="#1">
+              <div class="level">
+                  <img class="levelIcon" src="img/py-ascii.png">
+                  <p>Level 0<br/>Introduction</p>
+              </div>
+              </a>
+              <a href="#2">
+              <div class="level">
+                  <img class="levelIcon" src="img/fx-ascii.png">
+                  <p>Level 1<br/>Functions</p>
+              </div>
+              </a>
+              <a href="#3">
+              <div class="level">
+                  <img class="levelIcon" src="img/cow-ascii.png">
+                  <p>Level 2<br/>Objects</p>
+              </div>
+              </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>
