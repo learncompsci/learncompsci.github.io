@@ -11,6 +11,14 @@ body{
     color: #555;
     line-height: 1.7;
 }
+@viewport {
+    width: device-width ;
+    zoom: 1.0 ;
+}
+
+@-ms-viewport {
+    width: device-width ;
+}
 
 a{
     text-decoration: none;
@@ -90,6 +98,10 @@ a:hover{
     .column {
         width: 100%;
     }
+    .parallax{
+        margin-left: 0%;
+        margin-right: 0%;
+    }
 }
 
 .titles{
@@ -107,4 +119,37 @@ a:hover{
 
 p{
     line-height: 1.3;
+}
+
+.back{
+    margin-top: 10%;
+
+}
+
+ul,li { list-style-type: none;
+        list-style-position:inside;
+        margin:0;
+        padding:0; }
+
+h3{
+    margin-bottom: -5px;
+
+}
+
+footer{
+
+    text-align: center;
+    width: 100%;
+    padding-top: 2%;
+}
+
+.footnavleft{
+    text-align: center;
+    display: inline-block;
+    padding-right: 15%
+}
+.footnavright{
+    text-align: center;
+    display: inline-block;
+    padding-left: 15%
 }
