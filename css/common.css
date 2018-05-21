@@ -7,7 +7,6 @@ html{
 
 body{
     margin: 0 auto;
-    max-width: 50em;
     font-family: "Helvetica", "Arial", sans-serif;
     color: #555;
     line-height: 1.7;
@@ -23,24 +22,20 @@ a:hover{
 }
 
 .parallax{
+    margin-left: 30%;
+    margin-right: 30%;
 
 }
 
-.subtitle{
-    font-size: 1.7em;
-}
 
 .classContainer{
 }
 
-.level{
-    margin: 30px;
-    float: left;
-}
 
 .levelIcon{
-    width: 150px;
-    height: 150px !important;
+    width: 100%;
+    max-width: 300px;   
+    max-height: 300px;    
 }
 
 #typed{
@@ -53,4 +48,63 @@ a:hover{
     height: 300;
     display: block;
     margin: 0 auto;
+}
+
+.column {
+    float: left;   
+
+}
+
+.outleft{
+    width: 24%;
+    margin-right: 1%;  
+}
+
+.left{
+    width: 24%;
+    margin-right: 1%;    
+}
+
+.right{
+    width: 24%;
+    margin-right: 1%;  
+}
+
+.outright{
+    width: 24%;
+    margin-right: 1%;  
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row{
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+.titles{
+    text-align: left;
+}
+
+
+.subtitles{
+    float: center;
+    text-align: center;
+    margin-top: 0px;
+    color: #555;
+
+}
+
+p{
+    line-height: 1.3;
 }
