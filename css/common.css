@@ -30,8 +30,8 @@ a:hover{
 }
 
 .parallax{
-    margin-left: 30%;
-    margin-right: 30%;
+    margin-left: 25%;
+    margin-right: 25%;
 
 }
 
@@ -42,8 +42,8 @@ a:hover{
 
 .levelIcon{
     width: 100%;
-    max-width: 300px;   
-    max-height: 300px;    
+    max-width: 200px;   
+    max-height: 200px;    
 }
 
 #typed{
@@ -166,4 +166,32 @@ footer{
 
 .subtitles:hover{
     color: #222;
+}
+
+.space{
+    height: 110px;
+}
+
+.lineshrink{
+    line-height: 1.0;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.vertical-menu {
+    padding-top: 10px;
+    width: 210px; /* Set a width if you like */
+    margin-left: 25%;
+
+}
+
+.vertical-menu a {
+    display: block; /* Make the links appear below each other */
+    padding: 1px; /* Add some padding */
+    text-decoration: none;
+    color: #555;
+    }
+
+.vertical-menu a:hover {
+    color:  #222;
 }
