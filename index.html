@@ -5,274 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <script>
-     var textIndex = 0;
-     var txt = 'Your Programming Journey Begins Here*>>> |';
-     var done = false;
-
-     // type out the text
-     function type(){
-         if(textIndex < txt.length){
-             if(txt.charAt(textIndex) != '*')
-                 document.getElementById('typed').innerHTML += txt.charAt(textIndex);
-             else
-                 document.getElementById('typed').innerHTML += "<br>";
-             
-             textIndex++;             
-
-             setTimeout(type, (done ? 500 : 50));
-             
-         } else { // flash prompt
-             done = true;
-             // cut off the last character
-             var tmp = document.getElementById('typed').innerHTML;
-             tmp = tmp.substring(0, tmp.length - 1);
-             
-             textIndex--;
-             document.getElementById('typed').innerHTML = tmp;
-             
-             setTimeout(type, 500);
-         }
-     }
-
-     // call on page load
-     window.onload = () => { type(); }
+    var textIndex = 0;
+    var txt = 'Your Programming Journey Begins Here*>>> |';
+    var done = false;
+    // type out the text
+    function type(){
+    if(textIndex < txt.length){
+    if(txt.charAt(textIndex) != '*')
+    document.getElementById('typed').innerHTML += txt.charAt(textIndex);
+    else
+    document.getElementById('typed').innerHTML += "<br>";
+    
+    textIndex++;
+    setTimeout(type, (done ? 500 : 50));
+    
+    } else { // flash prompt
+    done = true;
+    // cut off the last character
+    var tmp = document.getElementById('typed').innerHTML;
+    tmp = tmp.substring(0, tmp.length - 1);
+    
+    textIndex--;
+    document.getElementById('typed').innerHTML = tmp;
+    
+    setTimeout(type, 500);
+    }
+    }
+    // call on page load
+    window.onload = () => { type(); }
     </script>
   </head>
-
   <body>
-
     <div class="content">
       <div class="parallax">
+        
+        <img src="img/logo.png" class="logoStyle"/>
         <p>
-          <pre class = "lineshrink" style="font-weight:bold">
-| _ _  _ _  _ _  _  _  _ _.    _  _ _ 
-|(-(_|| | )(_(_)||||_)_)(_|.  (_)| (_)
-                   |               _/ 
-
-</pre>
-
+          coming soon
         </p>
-        <div class = "space">
-  
-        <h1 id="typed">>>> </h1>
-        </div>
-        <p>
-          Learncompsci.org is a website where free lessons and teaching materials are provided for any skill level. Brand new programmer who has never written a line of code? Start at level 0. Just looking for a refresher on a specific topic? Go straight where you want to.
-          <br>
-          No fees, No fancy web effects, No BS. The lessons on here were created by real software developers and computer science majors with real experince. Our
-          curriculm is built so that anyone can learn. We want you to learn, not be inpressed by our prowess. 
-          
-          <br>
-          Any questions? Email: learncompscigithub@gmail.com
-        </p>
-
-      </div>
-      <div class="vertical-menu">
-          <p style="font-weight:bold">Skills provided</p>
-          <a href="#entry">> entry point</a>
-          <a href="#python">> python</a>
-          <a href="#cad">> cad</a>
-          <a href="#nxtes">> NXT (espanol)</a>
-          <a href="#">> Scratch (coming soon)</a>
-          <a href="#">> IOT C (coming soon)</a>
-          <a href="#">> Machine Learning (coming soon)</a>
-          <a href="#">> Tkinter python (coming soon)</a>
-          <a href="#">> Javascript (coming soon)</a>
-          <a href="#">> HTML/CSS (coming soon)</a>
-        </div>  
-      <div class="parallax">
-
-<!-- basicbasicbasic --> 
-        <div class="row">
-          <a name="entry"></a>
-          <h1 class="titles">Entry Point/general overview of compsci (for absolute beginners)</h1>
-
-          <div class="column outleft">
-            <a href="#">
-              <div class="level">
-                  <img class="levelIcon" src="img/novice.PNG">
-                  <p class = "subtitles">Level 0: <br>Introduction</p>
-              </div>
-            </a>
+        <div class="vertical-menu">
+          <div class="left">
+            <a href="#"># entry point</a>
+            <a href="#"># python</a>
+            <a href="#"># cad</a>
+            <a href="#"># NXT (w/espanol)</a>
+            <a href="#"># Scratch (w/espanol)</a>
+            
           </div>
-
-
-          <div class="column left">
-            <a href="#2">
-              <div class="level">
-                  <img class="levelIcon" src="img/novice.PNG">
-                  <p class = "subtitles">Level 1: <br>So you want to learn how to code</p>
-              </div>
-              </a>
+          <div class="right">
+            <a href="#"># IOT C</a>
+            <a href="#"># Machine Learning </a>
+            <a href="#"># Tkinter python</a>
+            <a href="#"># Javascript </a>
+            <a href="#"># HTML/CSS</a>
           </div>
-
-          <div class="column right">
-            <a href="#2">
-              <div class="level">
-                  <img class="levelIcon" src="img/novice.PNG">
-                  <p class = "subtitles">Level 2: <br>Chose a career path</p>
-              </div>
-              </a>
-          </div>
-
-          <div class="column outright">
-            <a href="#3">
-              <div class="level">
-                  
-              </div>
-            </a>
-          </div> 
-        </div>
-<!-- basicbasicbasic -->        
-<!-- Python -->
-        <div class="row">
-          <a name="python"></a>
-          <h1 class="titles">Python</h1>
-
-          <div class="column outleft">
-            <a href="python0.html">
-              <div class="level">
-                  <img class="levelIcon" src="img/py-ascii.png">
-                  <p class = "subtitles">Level 0: <br>Introduction</p>
-              </div>
-            </a>
-          </div>
-
-          <div class="column left">
-            <a href="python1.html">
-              <div class="level">
-                  <img class="levelIcon" src="img/fx-ascii.png">
-                  <p class = "subtitles">Level 1: <br>Functions</p>
-              </div>
-              </a>
-          </div>
-
-          <div class="column right">
-            <a href="python2.html">
-              <div class="level">
-                  <img class="levelIcon" src="img/cow-ascii.png">
-                  <p class = "subtitles">Level 2: <br>Objects</p>
-              </div>
-              </a>
-          </div>
-
-
-          <div class="column outright">
-            <a href="python3.html">
-              <div class="level">
-                  <img class="levelIcon" src="img/net-ascii.png">
-                  <p class = "subtitles">Level 3: <br>Web Access</p>
-              </div>
-            </a>
-          </div> 
-        </div>
-<!-- Python -->   
-
-<!-- CAD -->
-        <div class="row">
-          <a name="cad"></a>
-          <h1 class="titles">CAD</h1>
-
-          <div class="column outleft">
-            <a href="pages/cad0.html">
-              <div class="level">
-                  <img class="levelIcon" src="img/plane.PNG">
-                  <p class = "subtitles">Level 0: <br>Introduction</p>
-              </div>
-            </a>
-
-            <a href="pages/cad4.html">
-              <div class="level">
-                  <img class="levelIcon" src="img/share.PNG">
-                  <p class = "subtitles">Level 4: <br>Sharing your project</p>
-              </div>
-            </a>
-          </div>
-
-
-          <div class="column left">
-            <a href="pages/cad1.html">
-              <div class="level">
-                  <img class="levelIcon" src="img/plane2.PNG">
-                  <p class = "subtitles">Level 1: <br>Making a sketch</p>
-              </div>
-              </a>
-          </div>
-
-          <div class="column right">
-            <a href="pages/cad2.html">
-              <div class="level">
-                  <img class="levelIcon" src="img/cube.PNG">
-                  <p class = "subtitles">Level 2: <br>Assemblies</p>
-              </div>
-              </a>
-          </div>
-
-          <div class="column outright">
-            <a href="pages/cad3.html">
-              <div class="level">
-                  <img class="levelIcon" src="img/print.png">
-                  <p class = "subtitles">Level 3: <br>Printing</p>
-              </div>
-            </a>
-          </div> 
-        </div>
-<!-- CAD -->
-
-<!-- NXT (espanol) -->
-        <div class="row">
-          <a name="nxtes"></a>
-          <h1 class="titles">NXT (Espanol)</h1>
-
-          <div class="column outleft">
-            <a href="pages/nxtes0.html">
-              <div class="level">
-                  <img class="levelIcon" src="img/nxt.PNG">
-                  <p class = "subtitles">Level 0: <br>Introduccion</p>
-              </div>
-            </a>
-            <a href="pages/nxtes4.html">
-              <div class="level">
-                  <img class="levelIcon" src="img/nxt4.PNG">
-                  <p class = "subtitles">Level 4: <br>Procesamiento de Datos</p>
-              </div>
-            </a>
-          </div>
-
-
-          <div class="column left">
-            <a href="pages/nxtes1.html">
-              <div class="level">
-                  <img class="levelIcon" src="img/nxt1.PNG">
-                  <p class = "subtitles">Level 1: <br>Introduccion NXT 2.0</p>
-              </div>
-              </a>
-          </div>
-
-          <div class="column right">
-            <a href="pages/nxtes2.html">
-              <div class="level">
-                  <img class="levelIcon" src="img/nxt2.PNG">
-                  <p class = "subtitles">Level 2: <br>Continuo NXT 2.0</p>
-              </div>
-              </a>
-          </div>
-
-          <div class="column outright">
-            <a href="pages/nxtes3.html">
-              <div class="level">
-                  <img class="levelIcon" src="img/nxt3.PNG">
-                  <p class = "subtitles">Level 3: <br>Interruptores (ifs) y Procesamiento de datos</p>
-              </div>
-            </a>
-          </div> 
         </div>
       </div>
-    </div>
-  </body>
-  <footer>
-    <p class ="footnav"><a href="about.html">about</a></p>
-    <p class ="footnavcenter">---</p>
-    <p class ="footnav"><a href="http://orionmd.org/donate/">donate</a></p>
-  </footer>
-</html>
+    </body>
+  </html>

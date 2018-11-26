@@ -182,7 +182,14 @@ footer{
     padding-top: 10px;
     width: 210px; /* Set a width if you like */
     margin-left: 25%;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 
+}
+.left, .right{
+    width: 25%;
 }
 
 .vertical-menu a {
@@ -190,8 +197,18 @@ footer{
     padding: 1px; /* Add some padding */
     text-decoration: none;
     color: #555;
+
     }
 
 .vertical-menu a:hover {
     color:  #222;
+}
+
+.logoStyle{
+    max-width: 300px;
+    padding-top: 300px;
+}
+
+.content{
+    text-align: center;
 }
